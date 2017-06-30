@@ -12,10 +12,14 @@ Gordon Ramsey, a very smart guy, likes eating food. Now, Gordon is at a restaura
 
 Notes :
  
-1 Make sure to setup Spring Boot Application & follow TDD Approach for the     Assignment.
+1 Make sure to setup Spring Boot Application & follow TDD Approach for the Assignment.
+
 2 Follow Standard Coding Practices( Naming Conventions, Class/Method/In-line Comments etc..)
+
 3 Share the source code solution using Git Hub Link.
+
 4 Brief the approach you took to solve the problem and how you achieved the end result.
+
 5 Provide Maximum Satisfaction Value you achieved in your response.
  
  
