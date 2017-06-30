@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Gordon</title>
+</head>
+<body>
+
+	<div align="center">
+
+		<h4>Gordon</h4>
+		<form th:action="@{/}" method="post">
+			<span>Enter Total Minutes : </span><input type="number"
+				name="minutes" placeholder="Enter Total minutes" required="required" />
+			<button type="submit">Submit</button>
+		</form>
+
+		<br /> <br />
+
+		<div align="center">Total Dishes</div>
+		<br />
+
+		<table border="1">
+			<thead>
+				<tr>
+					<th>Dish ID</th>
+					<th>Satisfaction</th>
+					<th>Eating Time</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="dish : ${totalDishList}">
+					<td th:text="${dish.dishID}"></td>
+					<td th:text="${dish.satisfaction}"></td>
+					<td th:text="${dish.eatingTime}"></td>
+				</tr>
+			</tbody>
+		</table>
+		<br />
+		<div align="center">
+			<span th:if="${totalTime}"> Total Eating time <span
+				th:text="${totalTime}"></span></span> <span th:if="${totalSatisfaction}">
+				Total Satisfaction <span th:text="${totalSatisfaction}"></span>
+			</span>
+		</div>
+		<br />
+		<div th:if="${finalDishList}">
+			<table border="1">
+				<thead>
+					<tr>
+						<th>Dish ID</th>
+						<th>Satisfaction</th>
+						<th>Eating Time</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="dish : ${finalDishList}">
+						<td th:text="${dish.dishID}"></td>
+						<td th:text="${dish.satisfaction}"></td>
+						<td th:text="${dish.eatingTime}"></td>
+					</tr>
+				</tbody>
+			</table>
+			<br />
+			<div align="center">
+				<span th:if="${timeUsed}"> Total Time <span
+					th:text="${timeUsed}"></span></span> <span
+					th:if="${totalSatisfactionAchived}"> Total Satisfaction <span
+					th:text="${totalSatisfactionAchived}"></span></span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
